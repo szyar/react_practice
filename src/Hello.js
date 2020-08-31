@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import "./Hello.css";
 
 const Greeting = props => {
@@ -10,10 +11,26 @@ const Greeting = props => {
   return element;
 }
 
-const Message = (props) => {
+const Message = props => {
   return (
     <h3>{props.message}</h3>
   );
+}
+
+class Clock extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>It is { this.state.date.toLocaleTimeString() }.</h3>
+      </div>
+    );
+  }
 }
 
 const Hello = () => {
@@ -25,6 +42,7 @@ const Hello = () => {
       <Message message="Hello there" />
       <Message message="Good to see you here" />
       <Message message="Have a nice day" />
+      <Clock />
     </div>
   );
 
