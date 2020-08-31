@@ -18,9 +18,8 @@ footer {
   height: 52px;
   bottom: 0 !important;
   position: fixed;
-  background-color: #ffffff;
+  background-color: #206a5d;
   display: flex !important;
-  align-items: center;
   justify-content: center;
   -webkit-box-shadow: 7px 4px 5px 2px rgba(0,0,0,1);
   -moz-box-shadow: 7px 4px 5px 2px rgba(0,0,0,1);
@@ -29,5 +28,7 @@ footer {
 
 footer p {
   margin-bottom: 0;
-  color: #000;
+  font-size: large;
+  font-weight: bold;
+  color: #fff;
 }

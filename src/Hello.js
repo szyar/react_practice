@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hello.css";
 
-const Greeting = (props) => {
+const Greeting = props => {
   const element = (
     <div>
       <h1>Hello {props.name}!</h1>
@@ -10,8 +10,8 @@ const Greeting = (props) => {
   return element;
 };
 
-const Message = (props) => {
-  return <h4>{props.message}</h4>;
+const Message = props => {
+  return <h3>{props.message}</h3>;
 };
 
 class Clock extends React.Component {
@@ -30,27 +30,31 @@ class Clock extends React.Component {
 
   tick() {
     this.setState({
-      date: new Date()
+      date: new Date(),
     });
   }
 
   render() {
     return (
       <div>
-      <h3>{this.props.text} {this.state.date.toLocaleTimeString()}.</h3>
+        <h3>
+          {this.props.text} {this.state.date.toLocaleTimeString()}
+        </h3>
       </div>
     );
   }
 }
 
-const Hello = () => {
+const Hello = (props) => {
   return (
-    <div>
-      <Clock text="It is" />
-      <Greeting name="szyar" />
-      <Greeting name="eve" />
-      <Message message="Good to see you here" />
-      <Message message="Have a nice day" />
+    <div className="wrapper">
+      <div className="clock-wrapper">
+        <Clock text={props.text} />
+      </div>
+      <Greeting name={props.name} />
+      <Greeting name={props.name1} />
+      <Message message={props.message} />
+      <Message message={props.message1} />
     </div>
   );
 };
