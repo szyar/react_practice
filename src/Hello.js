@@ -12,7 +12,7 @@ const Greeting = props => {
 
 const Message = (props) => {
   return (
-    <h2>{props.message}</h2>
+    <h3>{props.message}</h3>
   );
 }
 
