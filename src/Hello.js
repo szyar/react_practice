@@ -10,13 +10,21 @@ const Greeting = props => {
   return element;
 }
 
+const Message = (props) => {
+  return (
+    <h2>{props.message}</h2>
+  );
+}
+
 const Hello = () => {
 
   return (
     <div>
       <Greeting name="szyar"/>
       <Greeting name="eve" />
-      <h2>Good to see you here</h2>
+      <Message message="Hello there" />
+      <Message message="Good to see you here" />
+      <Message message="Have a nice day" />
     </div>
   );
 
