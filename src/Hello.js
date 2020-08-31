@@ -1,20 +1,24 @@
 import React from "react";
 import "./Hello.css";
 
-class Hello extends React.Component {
+const Greeting = props => {
+  const element = (
+    <div>
+      <h1>Hello {props.name}!</h1>
+      <h2>Good to see you here</h2>
+    </div>
+  );
+  return element;
+}
 
-  render() {
-    const element = (
-      <div>
-        <h1>Hello!</h1>
-        <h2>Good to see you here</h2>
-      </div>
-    );
+const Hello = () => {
 
-    return(
-      element
-    );
-  }
+  return (
+    <div>
+      <Greeting name="szyar"/>
+    </div>
+  );
+
 }
 
 export default Hello;
