@@ -12,7 +12,7 @@ const Greeting = (props) => {
 };
 
 const Message = (props) => {
-  return <h3>{props.message}</h3>;
+  return <h4>{props.message}</h4>;
 };
 
 class Clock extends React.Component {
@@ -34,11 +34,11 @@ class Clock extends React.Component {
       date: new Date()
     });
   }
-  
+
   render() {
     return (
       <div>
-        <h3>It is {this.state.date.toLocaleTimeString()}.</h3>
+      <h3>{this.props.text} {this.state.date.toLocaleTimeString()}.</h3>
       </div>
     );
   }
@@ -47,10 +47,9 @@ class Clock extends React.Component {
 const Hello = () => {
   return (
     <div>
-      <Clock />
+      <Clock text="It is" />
       <Greeting name="szyar" />
       <Greeting name="eve" />
-      <Message message="Hello there" />
       <Message message="Good to see you here" />
       <Message message="Have a nice day" />
     </div>
